@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>UX Example Home - Software Portfolio - By John Mulhall</title>
+	<meta name="author" content="John Mulhall">
+    <meta name="rights" content="John Mulhall">
+	<meta property="article:published_time" content="2023-09-10T12:00:00Z">
+	<meta name="description" content="UX example of a software portfolio. This 2017 user experience web design by John Mulhall is redeployed via CICD DevOps pipeline for Maolte Technical Solutions."/>
+	<meta name="keywords" content="demo, demo project, project, devops, ux, user experience, maolte, maolte technical solutions, software, development, html, css, javascript, mvc, technology, tech, technical, marketing, digital marketing, business, digital business"/>
+    <meta name="generator" contents="All meta tagging is manual">
+	<meta name="image" content="img/imgJohnGrad17ProPic.jpg">
+	<!--Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<!--Twitter Card tags-->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@johnmlhll">
+	<meta name="twitter:creator" content="@johnmlhll">
+	<meta name="twitter:title" content="UX Example Home - Software Portfolio - By John Mulhall">
+	<meta name="twitter:description" content="UX example of a software portfolio. This 2017 user experience web design by John Mulhall is redeployed via CICD DevOps pipeline for Maolte Technical Solutions.">
+	<meta name="twitter:image" content="img/imgJohnGrad17ProPic.jpg">
+	<meta name="twitter:image:alt" content="Image of John Mulhall collecting his 1st class honours in his Associates Degree in Computer Science at DBS in 2017.">
+	<meta name="twitter:image:width" content="600">
+	<meta name="twitter:image:height" content="482">
+	<meta name="robots" content="index,follow,max-image-preview:large">
+	<!--Open Graph Facebook, Mastadon and LinkedIn tags-->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="UX Example Home - Software Portfolio - By John Mulhall">
+	<meta property="og:description" content="UX example of a software portfolio. This 2017 user experience web design by John Mulhall is redeployed via CICD DevOps pipeline for Maolte Technical Solutions.">
+	<meta property="og:site_name" content="UX Example - Software Portfolio">
+	<meta property="og:image" content="img/imgJohnGrad17ProPic.jpg">
+	<meta property="og:image:width" content="600">
+	<meta property="og:image:height" content="482">
+	<meta property="og:image:alt" content="Image of John Mulhall collecting his 1st class honours in his Associates Degree in Computer Science at DBS in 2017.">
+	<!--CSS/Javascript Files-->	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/javascript.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+	<script>onload = loadImages;</script>	
+	<link rel="stylesheet" type="text/css" href="styling/style.css"/>
+</head>
+<body>		
+    <div id="wrapper">  
+		<!--Header-->
+		<header>
+            <h1><sup>Scientia Est</sup></h1>
+		    <h1>Software Portolio John Mulhall</h1>	
+			<a id="github_profile" href="https://github.com/johnmlhll" target="_blank">
+				<img src="img/imgGithubProfile.png" alt="An image of GitHub logo with a link to John Mulhall's profile"/>
+			</a>	
+        </header>
+		<!--Navbar-->	
+		<div id="nav_wrapper"> 	
+            <div id="navbar_tab" onclick="openNav()"> <h3>Menu</h3></div>
+			<div id="nav">	
+    			<!--Restricted Navbar > 768px-->	
+        	    <nav id="unrestricted_nav">	
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+        	            <li><a href="about.html">About</a></li>
+        			    <li><a href="resume.html">Resume</a></li>
+        			    <li><a href="itn.html">Irish Tech News</a></li>
+        			    <li><a href="contact.html">Contact</a></li>	
+                    </ul>
+        	    <a href="javascript:void(0)" class="btn_close" onclick="closeNav()"><p>Close Menu</p></a>
+                </nav>	
+    		    <!--Restricted Navbar < 768px-->
+                <nav id="restricted_nav">  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+        	            <li><a href="about.html">About</a></li>
+        			    <li><a href="resume.html">Resume</a></li>
+        			    <li><a href="itn.html">Irish Tech News</a></li>
+        			    <li><a href="contact.html">Contact</a></li>	
+                    </ul>
+                <a href="javascript:void(0)" class="btn_close" onclick="closeNav()"><p>Close Menu</p></a>
+                </nav>  
+			</div>		
+        </div>	
+		<!--Main Body/Views-->	
+        <article>
+            <div id="home_view">
+                <section id="welcome">
+                    <h2>Home</h2>
+                    <p>
+                        A hearty welcome to my software portfolio application built on ASP.NET Core MVC, running 
+                        on Debs (a.k.a. My Macbook Pro 2012)! Production deployment was done on Azure and Github of course was used for Version Control.
+                        This application goes hand in hand with source code found on my Github profile, which is detailed in the icon
+                        above and also in the below portfolio by project. I hope this UX designed by me in 2017 for software professionals, will be give useful 
+                        ideas on how to design your professional portfolio and present it to the world via a website or application.
+                        Also, please feel free to connect with me on 
+                        <a href="https://www.linkedin.com/in/johnmlhll/" target="_blank">Linkedin</a>, 
+                        <a href="https://twitter.com/johnmlhll" target="_blank">Twitter</a>, and 
+                        <a href="https://github.com/johnmlhll" target="_blank">Github</a>.
+                    </p>
+                    <a id="img_john"><img src="img/imgJohnMulhall.jpg" alt="Image of John Mulhall"></a>
+                    <p>
+                        Whilst this application is mainly dedicated to my software portfolio bringing you details of my personal software projects along with 
+                        summary detail only of my commercial software projects, you can also find the following by clicking on the menu icon to the left of 
+                        this page.
+                    </p>	
+                    <ul>
+                        <li>
+                            <a href="index.html" target="_blank">Home</a> Page - Brings you home to this page and my software portfolio beneath.
+                        </li>
+                        <li>
+                            <a href="about.html" target="_blank">About</a> Page - Brings you a short bio about myself, qualifications, experience summary, interests, etc.
+                        </li>
+                        <li>
+                            <a href="resume.html" target="_blank">Resume</a> Page - Brings you a short form version of my Curriculum Vitae in Resume format 
+                        </li>
+                        <li>
+                            <a href="itn.html" target="_blank">Irish Tech News</a> Page - Brings you background to my writing experience and my publications with 
+                            <a href="https://irishtechnews.ie/?s=John+Mulhall" target="_blank">Irish Tech News</a>.
+                        </li>
+                        <li>
+                            <a href="contact.html" target="_blank">Contact</a> Page - Brings you to the best contact details to connect with my goodself!
+                        </li>
+                    </ul>
+                </section>
+                <section id="software_portfolio">
+                    <h2>The Software Portfolio</h2>
+                    <p>
+                        Although, I started to code in September 2014 for the first time in earnest, the Software Development set out below is based 
+                        upon completed projects of note from September 2016 when I started the Higher Diploma in Science in Computing 
+                        (Software Development) at <a href="http://www.dbs.ie/courses/ict-skills-programme" target="_blank">Dublin Business School</a>. 
+                        Selected projects completed on the course along with those of note completed in my spare time; both then and since make up the 
+                        bulk of my software portfolio. Please note certain Projects on my Github profile that predate the portfolio start date of 
+                        September 2016 will not be included in my software portfolio. I have implemented a JavaScript toggle function to make
+                        perusal of my software portfolio more user friendly, so just click on any of the "Show More/Less" buttons under the 
+                        project entries to see the details associated with the entry.
+                    </p>
+                    <!--10 Portfolio Entry - Project TryParse -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> TryParse
+                            <span class="project_right">Publication Date: November 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoJava8.png" alt="Image of Java Logo"/>
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                None
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgGithubProfile.png" alt="Image of Github Profile Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project has is a Java Project designed to replicate the C# method TryParse() which uses the Parse methods for primitive 
+                                datatypes int, long, double and float. Instead of having to exception handle a failure to parse the native Java 
+                                methods, this JAR library returns 0 in the related datatype when NumberFormatException is tripped upon 
+                                a failed parse attempt. The TryParse JAR is available at the Project's github repository below. 
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bbTohKSNZ6I" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/TryParse" target="_blank">Project TryParse</a></p>
+                                <p>Live Site - Hyperlink: Restricted - Unavailable</p>
+                            </div>  
+                        </div>  
+                   </div>
+                    <!--09 Portfolio Entry - Project Portfolio-->
+                    <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Project Portfolio
+                            <span class="project_right">Publication Date: October 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>   
+                        <div class="portfolio_entry_detail">	
+                            <p>Languages:</p>	
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoHtml5Css3Js.png" alt="Image of HTML5, CSS3 and JavaScript Logos"/>
+                                <img src="img/imgLogoCSharpVS.jpg" alt="Image of C# and Visual Studio Logos"/>	
+                                <img src="img/imgLogoASPRazor.png" alt="Image of ASP.NET Razor Logo"/>	
+                            </a>	
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoASPNETMVC.png" alt="Image of Microsoft ASP.NET MVC Logo"/>
+                                <img src="img/imgLogoXML.png" alt="Image of XML Logo"/>    
+                            </a>	
+                             <p>Deployment:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoAzure.png" alt="Image of Microsoft Azure Logo"/>
+                            </a>	
+                            <p>Project Trailer:</p>  
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LNmyemO8M6c" frameborder="0" allowfullscreen></iframe>
+                            <p>Project Description:</p>	
+                            <p>
+                                This project is build on an ASP.NET Core framework and is designed to showcase John's software portfolio from
+                                September 2016 onwards. The site is dedicated to the showcasing of his software projects along with his 
+                                background, resume, writing portfolio with Irish Tech News and also a contact form. The application is
+                                written on a ASP.NET core stack in C sharp with a native XML database to store contact form information. 
+                                The front end is crafted using Razor, HTML5, CSS3 and Javascript. The purpose is to give you a good UX experience
+                                in checking out John's software projects and finding out more about him through the site and its social media/contact
+                                links/details.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qXU1SuT1Vl0" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/ProjectPortfolio" target="_blank">Project Portfolio</a></p>
+                                <p>Live Site - Hyperlink: <a href="index.html" target="_blank">Software Portfolio</a></p>
+                            </div> 
+                        </div>	
+                    </div>
+                    <!--08 Portfolio Entry - MulderbertPX-->
+                    <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> MulderbertPX
+                            <span class="project_right">Publication Date: October 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoHtml5Css3Js.png" alt="Image of HTML5, CSS3 and JavaScript Logos"/>
+                                <img src="img/imgLogoCSharpVS.jpg" alt="Image of C# and Visual Studio Logos"/> 
+                                <img src="img/imgLogoASPRazor.png" alt="Image of ASP.NET Razor Logo"/>    
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoASPNETMVC.png" alt="Image of Microsoft ASP.NET MVC Logo"/>
+                                <img src="img/imgLogoMicrosoftSQLServer.png" alt="Image of SQL Server Logo"/>	
+                                <img src="img/imgLogoXML.png" alt="Image of XML Logo"/> 
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoAzure.png" alt="Image of Microsoft Azure Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-R5FL4Z5FFM" frameborder="0" allowfullscreen></iframe>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project is build on an ASP.NET (native) framework and is designed to showcase a version 2.0 of a college project
+                                that was done in v1.0 as a group project. Niall Colbert, Diarmiud Dermody and John made up the V1.0 team. 
+                                The site is dedicated to the showcasing of a minimum viable product for a newly digitised (fictitious) Fridge company 
+                                called Mulderbert & Co, whom are an established bricks and motor company moving into the digital space. The application 
+                                is written on a ASP.NET stack in C sharp with a native XML database for contact us information along with SQL server for 
+                                customer and transactional information. The relational Database instance is designed and developed to 3rd normal form
+                                ensuring good quality data persistence for core data generated by the site. The front end is crafted using Razor, 
+                                HTML5, CSS3 and Javascript. The purpose is to give you a good overview of John's technical and design ability in a 
+                                prior designed and built application, which he re-engineered to a smaller cost footprint yet maintaining data retention to 
+                                a good standard for deployment on Azure.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Gn8VkOoQiY" frameborder="0" allowfullscreen=true></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/CSharp-MulderbertPX" target="_blank">MulderbertPX</a></p>
+                            </div> 	
+                        </div>  
+                    </div>
+                    <!--07 Portfolio Entry - Angular4 Project Dublin-->
+                    <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Angular4 - Project Dublin
+                            <span class="project_right">Publication Date: August 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoHtml5Css3.png" alt="Image of HTML5 and CSS3 Logos"/>
+                                <img src="img/imgLogoTypeScript.png" alt="Image of Typescript Logo"/>  
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoAngular4TS.png" alt="Image of AngularJS Framework and TypeScript Logo"/>
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoGithubPages.png" alt="Image of Github Pages Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw5gQywwMPI" frameborder="0" allowfullscreen></iframe>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project is build on an Angular4 framework as a web application front end. The use of Bootstrap and any other
+                                framework (e.g. ASP.NET) is purposely absent to show case the pure Angular 4 features using HTML5, CSS3, Typescript and the 
+                                Angular 4 framework! The frontend is basically a brochure style web application 
+                                that gives tips on visiting Dublin, Ireland along with giving tips on Angular 4 and its powerful front end 
+                                features in developing a web application!
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YU7M9YB6bVE" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/Angular4-ProjectDublin" target="_blank">Angular 4 - Project Dublin</a></p>
+                                <p>Live Site - Hyperlink: <a href="https://johnmlhll.github.io/Angular4-ProjectDublin/" target="_blank">Angular 4 - Project Dublin</a></p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--06 Portfolio Entry - Commercial Project (Kinesense Ltd) -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Image Analysis Framework (Commercial)
+                            <span class="project_right">Publication Date: June 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoJava8.png" alt="Image of Java 8 Logo"/>                  
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoPostgreSQL.png" alt="Image of PostgreSQL Logo"/>  
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoCentOS.png" alt="Image of Linux(CentOS) Logo"/>
+                                <img src="img/imgLogoLinux.png" alt="Image of Linux Penguin Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project is bascially a Java framework to house a proprietary video analysis algorithm belonging to 
+                                Kinesense Ltd. I was the Junior Software Engineer on the project charged with building the Java framework running 
+                                on Linux/CentOS virtual machine's in turn on Linux/CentOS servers with ARM 64 processors and a PostgreSQL databse solution. My job was then to 
+                                take the processing part of the prioriety video analysis algorithm in C# and transcode it into Java ensuring
+                                the framework imported video files, processed the frames and conducted a frame by frame analysis
+                                storing data generated by the algorithm into the database solution within the framework. As I am bound by a Non
+                                Disclosure Agreement, no more information can be disclosed on this project. That said, I did gain a good proficiency in Java,
+                                Database Design and Development in PostgreSQL along with trouble shooting development issues in a commercial environment.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <p>Restricted - Unavailable</p>
+                            <div class="entry_urls">
+                                <p>Github Repository: Restricted - Unavailable</p>
+                                <p>Commerical Site - Hyperlink: <a href="https://www.kinesense-vca.com/" target="_blank">Kinesense Ltd</a></p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--05 Portfolio Entry - Project Personal Details (Java Swing) -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Personal Details
+                            <span class="project_right">Publication Date: June 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoJava8.png" alt="Image of Java 8 Logo"/>                  
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoMySQL.png" alt="Image of MySQL Database Logo"/>  
+                                <img src="img/imgLogoJavaSwing.png" alt="Image of Java Swing Framework Logo"/>
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoDesktop.png" alt="Image of Fat Client - Desktop Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project is a single tiered Java project using the Java Swing (and Java 8) framework to develop a simple data entry portal 
+                                on the desktop (i.e. fat client) for data entry of personal details. The application is connected to a MySQL database normalised
+                                to 3rd normal form and accepts (personal) data inputs for storage by the database.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ltlTSBWz4eo" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/JavaSwingGUI-ProjectPersonalDetails" target="_blank">Project Personal Details</a></p>
+                                <p>Live Site - Hyperlink: Restricted - Unavailable</p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--04 Portfolio Entry - Project Safe Haven (Java Android) -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Safe Haven
+                            <span class="project_right">Publication Date: April 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoJava8.png" alt="Image of Java 8 Logo"/>  
+                                <img src="img/imgLogoAndroid.png" alt="Image of Android Logo"/>
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoFirebase.jpg" alt="Image of Firebase Backend As A Service Logo"/>  
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoDesktop.png" alt="Image of Fat Client - Desktop Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project is a Android project that inputs refugee information on a handheld (basic in v1.0) as part of the 
+                                registration process and when saved uploads to Google Firebase, which is a Backend as a Service (BaaS). The 
+                                .json string is in this v1.0 version is the basic personal details of the refugee that is inputted onto Firebase
+                                via upload from the Android device. It is searchable in a developed system by anybody globally with authorised
+                                access to the Firebase instance the details are stored on. The application also has a check function which
+                                uses Google maps based on the users location with a pan function to check an address on site once there is access
+                                to the internet. If no internet access, the registration can be stored locally on the device before it is "saved" 
+                                to Firebase completing the registration. Data in this V1.0 is one way to Firebase, no retrieve, delete or edit 
+                                functionality is implemented in this V1.0 minimum viable product. A v2.0 of Safe Haven would see those features 
+                                implemented along other functional (e.g. auto check address without having to pan) and non functional features 
+                                (e.g. encryption for local handset data storage). 
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PRMLZkCCC2w" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/Android-ProjectSafeHaven" target="_blank">Project Safe Haven</a></p>
+                                <p>Live Site - Hyperlink: Restricted - Unavailable</p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--03 Portfolio Entry - Project DBS (.NET WinForms) -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Winforms Project DBS
+                            <span class="project_right">Publication Date: April 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoCSharpVS.jpg" alt="Image of C SHarp and Visual Studio Logos"/>  
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                <img src="img/imgLogoMicrosoftSQLServer.png" alt="Image of Firebase Backend As A Service Logo"/>  
+                                <img src="img/imgLogoDotNet.png" alt="Image of Microsoft .Net Logo"/>
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoDesktop.png" alt="Image of Fat Client - Desktop Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project has a 3 tier architecture designed to meet the project requirements of a college project which was to 
+                                design and build an extensible minimum viable product for a student records management system via Winforms, .Net 
+                                and SQL Server. The project has a gridview to see listed students, a new student, edit student and delete student
+                                features, which are fully interactive with the SQL Server instance running stored procedures from the application 
+                                layer in order to conduct database operations. Database was designed and implemented to run in the 3rd normal form 
+                                and the fat client application is desktop deployable only.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <p>Restricted - Unavailable</p>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/WinformsCSharp-ProjectDBS" target="_blank">Winforms Project DBS</a></p>
+                                <p>Live Site - Hyperlink: Restricted - Unavailable</p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--02 Portfolio Entry - Project B and B -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Project B and B
+                            <span class="project_right">Publication Date: March 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoHtml5Css3Js.png" alt="Image of HTML5, CSS3 and JavaScript Logos"/>
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                None
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoGithubPages.png" alt="Image of Github Pages Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This project has a front end only website, which was a college project to demonstrate web design ability. The
+                                project specs were for a fictitious B and B called "Moores B&B" who commissioned a brochure style web design
+                                for their flagship website. The pages include About Us, Our Customers, Activities, Rooms, Bookings, Useful Links, 
+                                Contact Us (including online form) and a site map in addition to the Home page. No frameworks whatsoever were
+                                allowed for this project such as Angular, Ajax or even Bootstrap. The idea was to demonstrate web design talent
+                                and development skills using HTML5, CSS3 and Javascript to a lessor extent. It was in essense a design and style
+                                project.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qlxmBGnhxDw" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/HTMLCSSJSWeb-ProjectBandB" target="_blank">Project B and B</a></p>
+                                <p>Live Site - Hyperlink: <a href="https://johnmlhll.github.io/HTMLCSSJSWeb-ProjectBandB/index.html" target="_blank">Moores B&B</a></p>
+                            </div>  
+                        </div>  
+                   </div>
+                   <!--01 Portfolio Entry - Project Linux Bash Admin -->
+                   <div class="portfolio_entry">
+                        <hr/>   
+                        <p>
+                            <strong>Project Name:</strong> Linux Admin
+                            <span class="project_right">Publication Date: March 2017</span>
+                        </p>
+                        <a class="btn_expand">Show More/Less</a>
+                        <div class="portfolio_entry_detail">    
+                            <p>Languages:</p>   
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoBash.png" alt="Image of the Bash Logo"/>
+                            </a>    
+                            <p>Frameworks/Storage:</p>
+                             <a class="portfolio_images">
+                                None
+                            </a>    
+                            <p>Deployment:</p>
+                            <a class="portfolio_images">
+                                <img src="img/imgLogoLinux.png" alt="Image of Linux Penguin Logo"/>
+                            </a>    
+                            <p>Project Trailer:</p>  
+                            <p>Restricted - Unavailable</p>
+                            <p>Project Description:</p> 
+                            <p>
+                                This college project was a pure bash scripting project interrogating the Linux File Structure. 
+                                The basic idea of the admin script was to take results by block and then return the results by student with comments 
+                                producing a new folder structure to store the results by student number. No other languages like AWK or Python 
+                                were allowed.
+                            </p>
+                            <p>Project Demonstration:</p>   
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sKpRatvJvLY" frameborder="0" allowfullscreen></iframe>
+                            <div class="entry_urls">
+                                <p>Github Repository: <a href="https://github.com/johnmlhll/Bash-ProjectLinuxAdmin" target="_blank">Project Linux Admin</a></p>
+                                <p>Live Site - Hyperlink: Restricted - Unavailable</p>
+                            </div>  
+                        </div>  
+                   </div>
+                </section>		
+            </div>
+        </article>
+		<!--Footer-->
+		<footer>
+			<span id="back_to_top" onclick="scrollUp()">
+                <img src="img/imgBackToTop.png" alt="Back to top arrow image"/>
+            </span> 
+			<hr/>
+			<!--Left hand side of footer-->
+		    <a id="logo"><img src="img/imgMulhallFamilyCrest.png" alt="Image of the Mulhall Family Crest"/></a>
+		    <ul id="footer_shares_linkedin">
+                <li>
+                    <a>
+						<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                        <script type="IN/Share" data-url="https://maolte.ie"></script>
+					</a> 
+				</li>	
+            </ul>  
+			<!--Center of footer-->
+            <ul id="footer_contact_details">
+			    <li><a><strong>Email:</strong>  john@maolte.ie</a></li>
+                <li><a><strong>Site:</strong> https://maolte.ie</a></li>
+				<li><a><strong>Mobile:</strong> +353 (0) 86 231 7352</a></li>
+				<li>
+					<a href="https://twitter.com/johnmlhll" target="_blank">
+						<img src="img/imgConnectTwitter.png" alt="Twitter Profile Link of John Mulhall"/>
+					</a>
+				    <a href="https://www.linkedin.com/in/johnmlhll/" target="_blank">
+						<img src="img/imgConnectLinkedIn.png" alt="LinkedIn Profile Link of John Mulhall"/>
+					</a>
+				</li>
+			</ul>
+			<!--Right Hand Side of footer-->
+			<div id="twitter_container">	
+    			<ul id="footer_shares_twitter">
+    				<li>
+    					<a href="http://www.Twitter.com/share" data-count="vertical" target="_blank">
+    						<img src="img/imgShareTwitter.png" alt="Image of Twitter Share Icon for Page"/>
+    					</a>
+    				</li>
+    				<li>
+    					<a href="http://www.Facebook.com/sharer.php?u=https:/maolte.ie" target="_blank">
+    						<img src="img/imgShareFacebook.png" alt="Image of Facebook Share Icon for Page"/>
+    					</a>
+    				</li>
+    			</ul>
+			</div>
+			<div id="copyright"> 
+				<sub>&copy; John Mulhall 2017 - <script type="text/javascript">document. write( new Date(). getFullYear() );</script></sub>
+			</div>	
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Deploy a static website using old UX crafted code by John Mulhall for Maolte Technical Solution to AWS S3 and CloudFront.
+Parameters:
+  S3BucketTitle:
+    Type: String
+    Description: Name of the S3 bucket hosting the S3 bucket hosting the static site.
+  TransitionGlacier:
+    Type: Number
+    Description:  Value of the transition in days for S3 lifecyle moved from Standard to Glacier
+  TagProject:
+    Type: String
+    Description: Resource tag tying the resource deployed back to the deploying project
+  TagBilling:
+    Type: String
+    Description: Resource tag for the billing type of the resource
+  TagClassification:
+    Type: String
+    Description: Aggregate resource type for the resource for abstracted analytics
+  TagCostcode:
+    Type: String
+    Description: Resource codecode for allocation purposes
+  CfTTLDefault:
+    Type: Number
+    Description: Default TTL for the CloudFront distro.
+  CfTTLMin:
+    Type: Number
+    Description: Minimum TTL for the CloudFront distro.
+  CfTTLMax:
+    Type: Number
+    Description: Maximum TTL for the CloudFront distro.
+  CfHttpVersion:
+    Type: String
+    Description: Http version for the CloudFront distro to communicate over
+  CfRootFile:
+    Type: String
+    Description: Name of HTML root file that the static site will be based upon.
+  BLCountry:
+    Type: String
+    Description: >-
+      Name of country that have reviewing restrictions imposed, 
+      which are comma split.
+Resources:
+  S3Bucket:
+    DeletionPolicy: Retain
+    Metadata:
+      Comment: >-
+        S3 bucket deployment for a bound cloudfront demo distro for Maolte Technical
+        Solutions
+    Properties:
+      AccessControl: Private
+      WebsiteConfiguration:
+        IndexDocument: !Ref CfRootFile
+      BucketName: !Ref S3BucketTitle
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+        - Id: GlacierRule
+          Prefix: glacier
+          Status: Enabled
+          Transitions:
+          - TransitionInDays: !Ref TransitionGlacier
+            StorageClass: GLACIER    
+      Tags:
+        - Key: project
+          Value: !Ref TagProject
+        - Key: billing
+          Value: !Ref TagBilling
+        - Key: costcode
+          Value: !Ref TagCostcode
+        - Key: classification
+          Value: !Ref TagClassification
+        - Key: resource
+          Value: !Join 
+            - '-'
+            - - !Sub 's3-component-${AWS::StackName}'
+              - !Ref 'AWS::Region'
+    Type: 'AWS::S3::Bucket'
+  S3BucketPolicy:
+    DependsOn: S3Bucket
+    Metadata:
+      Comment: Bucket policy for the UX review frontend content allowing for sole CloudFront (OAI) access.
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - 's3:GetObject'
+            Effect: Allow
+            Principal:
+              CanonicalUser: !GetAtt CfOriginAccessIdentity.S3CanonicalUserId
+            Resource:
+              - !Sub 'arn:aws:s3:::${S3Bucket}/*'
+    Type: 'AWS::S3::BucketPolicy'
+  CfDistribution:
+    Metadata:
+      Comment: >-
+        CloudFront Distro configured and bound for the demo S3 content bucket
+        on S3, which is home to the frontend UX design recrafting as a demo project 
+        for Maolte Technical Solutions.
+    DependsOn: S3Bucket
+    Properties:
+      DistributionConfig:
+        Comment: CloudFront Distro configured and bound for demo S3 content bucket on S3, which is home to the frontend UX demo code.
+        Origins:
+          - DomainName: !GetAtt S3Bucket.DomainName
+            Id: !Sub 'maolteie-distro-${S3Bucket}'
+            OriginPath: ''
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub 'origin-access-identity/cloudfront/${CfOriginAccessIdentity}'
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - HEAD
+            - GET
+          CachedMethods:
+            - HEAD
+            - GET
+          Compress: false
+          DefaultTTL: !Ref CfTTLDefault
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            Headers:
+              - Origin
+            QueryString: false
+          MaxTTL: !Ref CfTTLMax
+          MinTTL: !Ref CfTTLMin
+          TargetOriginId: !Sub 'maolteie-distro-${S3Bucket}'
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: !Ref CfRootFile
+        Enabled: true
+        HttpVersion: !Ref CfHttpVersion
+        IPV6Enabled: false
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: blacklist
+            Locations: !Split 
+              - ','
+              - !Ref BLCountry
+        PriceClass: PriceClass_100
+      Tags:
+        - Key: project
+          Value: !Ref TagProject
+        - Key: billing
+          Value: !Ref TagBilling
+        - Key: costcode
+          Value: !Ref TagCostcode
+        - Key: classification
+          Value: !Ref TagClassification
+        - Key: resource
+          Value: !Join 
+            - '-'
+            - - !Sub 's3-component-${AWS::StackName}'
+              - !Ref 'AWS::Region'
+    Type: 'AWS::CloudFront::Distribution'
+  CfOriginAccessIdentity:
+    Metadata:
+      Comment: !Sub >-
+        OAI Policy for CloudFront to only the UX demo S3 bucket:
+        ${S3Bucket}
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub >-
+          Using managed OAI policy for s3 bucket access from the CloudFront
+          distro only. S3 bucket ref: ${S3Bucket}
+    Type: 'AWS::CloudFront::CloudFrontOriginAccessIdentity'
+Outputs:
+  S3BucketName:
+    Description: S3 Bucket Name
+    Value: !Ref S3Bucket
+  CfDistributionId:
+    Description: >-
+      Id of the CloudFront distribution for the static site by Maolte Technical
+      Solutions
+    Value: !Ref CfDistribution
+  CfDistributionDomainName:
+    Description: Domain name attached to the CloudFront distribution
+    Value: !GetAtt CfDistribution.DomainName
